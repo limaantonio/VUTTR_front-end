@@ -1,0 +1,60 @@
+.cont{
+  width: 500px;
+  margin: 10px auto;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;  
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  margin-top: 100px;
+  
+}
+
+.cont h1{
+  margin-right: 200px;
+  margin-bottom: 40px;
+}
+
+.cont .content {
+  width: 400px;
+  align-items: center;
+
+}
+
+
+.cont .content {
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+}
+
+.cont .content input {
+  margin-top: 10px;
+}
+
+
+.cont .content textarea{
+  margin-top: 10px;
+  width: 100%;
+  height: 160px;
+  border: 0;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+}
+
+.cont .content #btnAdd{ 
+  margin-top: 30px;
+  background: #170c3a;
+  color: #fff;
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  border: 0;
+  font-size: 18px;
+}
+

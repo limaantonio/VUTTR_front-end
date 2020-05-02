@@ -1,0 +1,90 @@
+.container{
+  width: 100%;
+  max-width: 1120px;
+  
+  margin: 10px auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;  
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+
+.container h1{
+  color: #170c3a;
+  font-size: 36px;
+}
+
+.container h2{
+  color: #170c3a;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.container #inputSeach{
+  margin-top: 100px;
+  width: 600px;
+  
+}
+
+
+
+.section{
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card{
+  padding: 15px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  position: relative;
+  
+}
+
+.card h1{
+  color: #6554c0;
+  margin: 5px;
+  
+
+}
+.container .section .card  .btnTrash{
+  color: #6554c0;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  border: 0;
+ 
+}
+
+#bntAdcionar {
+  background: #170c3a;
+  color: #fff;
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  border: 0;
+  font-size: 18px;
+  margin-left: 280px;
+}
+
+.card p{
+  font-size: 18px;
+  margin: 5px;
+}
+
+.card p + p {
+  font-weight: bold;
+ 
+}
+
+.card .btnTrash{
+  border: 0;
+}
+
