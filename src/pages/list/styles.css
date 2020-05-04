@@ -2,8 +2,9 @@
   width: 100%;
   max-width: 1120px;
   
-  margin: 10px auto;
-  height: 100vh;
+  margin: 20px auto;
+
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,6 +16,7 @@
 
 
 .container h1{
+
   color: #170c3a;
   font-size: 36px;
 }
@@ -27,14 +29,18 @@
 
 .container #inputSeach{
   margin-top: 100px;
-  width: 600px;
+  width: 500px;
   
+}
+
+.container li{
+  list-style: none;
 }
 
 
 
 .section{
-  margin-top: 20px;
+  margin-top: 100px;
   width: 100%;
 }
 
@@ -63,17 +69,6 @@
  
 }
 
-#bntAdcionar {
-  background: #170c3a;
-  color: #fff;
-  width: 200px;
-  height: 60px;
-  border-radius: 8px;
-  border: 0;
-  font-size: 18px;
-  margin-left: 280px;
-}
-
 .card p{
   font-size: 18px;
   margin: 5px;
@@ -86,5 +81,44 @@
 
 .card .btnTrash{
   border: 0;
+}
+
+.card #tag{
+  display: inline;
+}
+
+.container .section form{
+  justify-content: space-between;
+
+
+}
+
+
+
+.container .section form #caixa{
+  
+  font-size: 18px;
+  display: inline;
+  
+  
+}
+
+
+.container .section form #caixa #check{
+  width: 50px;
+  height: 20px;
+  
+}
+
+#bntAdcionar {
+  background: #170c3a;
+  color: #fff;
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  border: 0;
+  font-size: 18px;
+  margin-left: 175px;
+  display: inline;
 }
 
