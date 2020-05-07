@@ -7,15 +7,43 @@ import api from '../../services/api';
 
 export default function List(){
   const [tools, setTools] = useState([]);
- 
-  
+  const [tag, setTag] = useState('');
   
   useEffect(() => {
-   api.get('tools').then(response => setTools(
-       response.data
-     )
-   )
+    loadTools()
   },[])
+
+  function loadTools(){
+    api.get('tools').then(response => setTools(
+      response.data
+      )
+    )
+  }
+
+  function handleCheck(){
+    var checkBox = document.getElementById("check");
+    
+    if(checkBox.checked == true){
+      loadByTag(tag)
+    }else{
+      loadTools()
+    }
+  }
+
+ async function loadByTag(tag){
+  
+    try{
+      const response = await api.get(`tools?tag=${tag}`).then(response => setTools(
+        response.data,
+
+      ));
+      console.log(tag);
+    }catch(err){
+      console.log(err);
+    }
+
+   
+  }
   async function handleDeleteTools(id){
     try{
       await api.delete(`tools/${id}`);
@@ -25,32 +53,37 @@ export default function List(){
 
       tool.splice(toolsIndex, 1);
       setTools(tool);
-     
-     
+    
     }catch(err){
       alert('Ocorreu um erro ao deletar essa ferramenta, tente novamente.')
     }
   }
-  
-
   return(
     <div className="container">
      <div className="section">
         <h1>VUTTR</h1>
         <h2>Very Userful Tools to Remember</h2>
-        <form>
-          <input id="inputSeach" placeholder="Search"></input>
+        <form onSubmit={loadByTag}>
+          <input
+            value={tag} 
+            onChange = {e => setTag(e.target.value)}
+            id="inputSeach" 
+            placeholder="Search"
+          />
           <div id="caixa">
-            <input id="check"type="checkbox"/>
-            <label>search in tags only</label>
+            <input 
+            onClick={handleCheck}
+            id="check"
+            type="checkbox" 
+          />
+          <label>search in tags only</label>
           </div>
           <Link to='/add'>
-            <button id="bntAdcionar">Adicionar</button>
+            <button  id="bntAdcionar">Adicionar</button>
           </Link>
         </form>
         <ul>
         {tools.map(tool => (
-        
           <li key={tool.id} className="card">
             <h1>{tool.title}</h1>
             <p>{tool.description}</p>
